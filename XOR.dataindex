@@ -1,0 +1,4 @@
+#This file is generated automatically.  Do not attempt to edit it!
+ft=2003 ext=.dat fname=XOR_eigs_TE.dat cols=[X,Y+] xnames=['k'] wnames=['eigs'] header=[skip] num_cols=40 num_rows=21 poln=0 freq_units=3
+ft=2047 ext=_bandsep_TE.dat fname=XOR_bandsep_TE.dat cols=[Y+] wnames=['gapnum','gap'] header=[skip] poln=0 freq_units=3 num_gap_pts=500
+ft=2002 ext=_gaps2.dat fname=XOR_gaps2.dat cols=[Y+] wnames=['poln','parity','low_a','low_b','gap_mid','gap_width','gap_ratio'] header=[skip] num_cols=7 poln=2 freq_units=3 num_gap_pts=500

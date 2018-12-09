@@ -1,0 +1,7 @@
+!/xl"Frequency (Hz)" /sx2.99792458e14
+/xl"Frequency (f/c, &mm^{-1})"
+/yl"Monitor Value (a.u.)"
+/l/lh"Monitor Label,\nType, Location:\n"
+/ls1
+XOR_m841_pow.dmn/lt"Mon\#841 \nPower, (9.28,0,0)"
+XOR.smn /powy2 /lt"Source"

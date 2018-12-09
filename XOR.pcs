@@ -1,0 +1,19 @@
+/tt"TE Band Structure"
+/yl"Frequency (&wa/2&pc=a/&l)"
+/lblx0
+/tkmx0
+/ats1.2
+/atj"CT"
+/ls9
+/ss0.4
+/st13
+/lc9
+/draw"XOR_gaps.inc"
+/grdy3
+/xl" "
+/t"\n&G":0,-1e30
+/ln0,-1e30,0,1e30
+/t"\nX":0.5,-1e30
+/ln0.5,-1e30,0.5,1e30
+/w0,0.500005,0,
+XOR_eigs_TE.dat /st6:* /lc9:* /igerror/igempty 

@@ -1,0 +1,6 @@
+PbgKPathFormat1 20 
+ScaleFactor 2*pi
+         0          0          0 Gamma
+       0.5          0          0 X
+       0.5          0       0.05 M
+         0          0          0 Gamma

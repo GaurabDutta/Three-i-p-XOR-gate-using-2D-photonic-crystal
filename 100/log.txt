@@ -1,0 +1,32 @@
+Using MPI Enabled Code
+FDTD Auto Time Step = 0.0242188, Stability Limit = 0.0256326
+FDTD grid info: NX=573 NZ=413, NT=4129
+FDTD estimated simulation memory usage: 9.93926 MB
+Rank 0: NX=573
+FDTD estimated monitor memory usage: 0.01568 MB
+FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Actual Computation Time = 0.644 min (WALL = 0.644)
+Using MPI Enabled Code
+FDTD Auto Time Step = 0.0242188, Stability Limit = 0.0256326
+FDTD grid info: NX=573 NZ=413, NT=4129
+FDTD estimated simulation memory usage: 9.93926 MB
+Rank 0: NX=573
+FDTD estimated monitor memory usage: 0.01568 MB
+FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Actual Computation Time = 0.591 min (WALL = 0.591)
+Using MPI Enabled Code
+FDTD Auto Time Step = 0.0242188, Stability Limit = 0.0256326
+FDTD grid info: NX=573 NZ=413, NT=4129
+FDTD estimated simulation memory usage: 9.93926 MB
+Rank 0: NX=573
+FDTD estimated monitor memory usage: 0.01568 MB
+FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Actual Computation Time = 0.608 min (WALL = 0.608)
+Using MPI Enabled Code
+FDTD Auto Time Step = 0.0242188, Stability Limit = 0.0256326
+FDTD grid info: NX=573 NZ=413, NT=8258
+FDTD estimated simulation memory usage: 9.93926 MB
+Rank 0: NX=573
+FDTD estimated monitor memory usage: 0.023936 MB
+FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Actual Computation Time = 1.335 min (WALL = 1.335)

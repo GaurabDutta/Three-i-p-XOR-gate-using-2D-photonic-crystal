@@ -1,0 +1,8332 @@
+
+A = Period
+Ax = A*sin(PhiPattern+PhiA)
+Ay = 0
+Az = A*cos(PhiPattern+PhiA)
+B = A
+Bx = 0
+By = 1
+Bz = 0
+C = A
+CellVolume = abs(Ax*(By*Cz-Bz*Cy)+Ay*(Bz*Cx-Bx*Cz)+Az*(Bx*Cy-By*Cx))
+Cx = C*sin(PhiPattern+PhiC)
+Cy = 0
+Cz = C*cos(PhiPattern+PhiC)
+DomainX = PeriodX
+DomainZ = PeriodZ
+Dx = PeriodX/16
+Dy = 0.1
+Dz = Dx*PeriodZ/PeriodX
+NX = 35
+NZ = 25
+OffsetX = 0*Period
+OffsetY = 0*Period
+OffsetZ = 0*Period
+Period = 0.58
+PeriodX = Ax
+PeriodZ = Cz
+PhiA = 90
+PhiC = 0
+PhiPattern = 0
+Radius = Period*.2
+ShapeAngle = PhiPattern
+SupercellX = 1
+SupercellY = 1
+SupercellZ = 10
+WidthLens = 8*Radius
+Xmax = (NX-1)/2*PeriodX
+Xmin = -Xmax
+Zmax = (NZ-1)/2*PeriodZ
+Zmin = -Zmax
+alpha = 0
+background_index = 1
+boundary_max = Xmax
+boundary_min = Xmin
+cad_aspectratio = 1
+char_nmax = 2
+char_nmin = 0.5
+color_outline = 0
+delta = 2.4
+dimension = 2
+domain_max = Zmax
+domain_min = Zmin
+fdtd_simmemcheck_warning = 0
+fdtd_stop_time = 100
+fdtd_time_step = 0.02421875
+fdtd_time_step_auto = 1
+free_space_wavelength = 1.55
+grid_size = Dx
+grid_size_y = Dy
+height = 0
+index_display_mode = DISPLAY_CONTOURMAPXZ
+k0 = (2*pi)/free_space_wavelength
+kbar = k0*Neff
+lambda = free_space_wavelength
+launch_angle = 0
+launch_position = -Period*7
+launch_position_z = -Period*12
+launch_tilt = 1
+launch_type = LAUNCH_GAUSSIAN
+launch_width = Period
+pbg_centerX = 0
+pbg_centerY = 0
+pbg_centerZ = 0
+pbg_dim_code = 2
+pbg_eig_tol = 1e-008
+pbg_estnum_kpts = 21
+pbg_grid_round = 1
+pbg_kpath = 2
+pbg_kpath_divisions = 20
+pbg_kpath_file = XOR.kpth.txt
+pbg_kpath_latax = (Ax)*(1)
+pbg_kpath_latay = (Ay)*(1)
+pbg_kpath_lataz = (Az)*(10)
+pbg_kpath_latbx = (Bx)*(1)
+pbg_kpath_latby = (By)*(1)
+pbg_kpath_latbz = (Bz)*(10)
+pbg_kpath_latcx = (Cx)*(1)
+pbg_kpath_latcy = (Cy)*(1)
+pbg_kpath_latcz = (Cz)*(10)
+pbg_kpath_latshape = 4
+pbg_kpath_shape_code = 4
+pbg_kpath_shiftx = 0
+pbg_kpath_shifty = 0
+pbg_kpath_shiftz = 0
+pbg_lat_vec_a_steps = 16
+pbg_lat_vec_ax = Ax
+pbg_lat_vec_ay = Ay
+pbg_lat_vec_az = Az
+pbg_lat_vec_b_steps = 8
+pbg_lat_vec_bx = Bx
+pbg_lat_vec_by = By
+pbg_lat_vec_bz = Bz
+pbg_lat_vec_c_steps = 128
+pbg_lat_vec_cx = Cx
+pbg_lat_vec_cy = Cy
+pbg_lat_vec_cz = Cz
+pbg_layout = PBG_LAYOUT_CUBIC_XZ
+pbg_num_bands = 40
+pbg_polarization = 0
+pbg_sim_tool = PBG_SIM_PLANEWAVE
+pbg_use_lat_defaults = 1
+sim_tool = ST_FULLWAVE
+slice_display_mode = DISPLAY_CONTOURMAPXY
+slice_grid_size = 0.0625
+slice_grid_size_y = 0.125
+slice_output_format = OUTPUT_NONE
+slice_step_size = 0.078125
+step_size = Dz
+structure = STRUCT_CHANNEL
+width = 5
+
+
+lens 1
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 2
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 3
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 4
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 5
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 6
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 7
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 8
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 9
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 10
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 11
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 12
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 13
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 14
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 15
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 16
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 17
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 18
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 19
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 20
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 21
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 22
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 23
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 24
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -17*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -17*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 25
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 26
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 27
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 28
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 29
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 30
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 31
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 32
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 33
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 34
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 35
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 36
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 37
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 38
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 39
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 40
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 41
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 42
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 43
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 44
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 45
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 46
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 47
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 48
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -16*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -16*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 49
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 50
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 51
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 52
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 53
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 54
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 55
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 56
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 57
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 58
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 59
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 60
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 61
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 62
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 63
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 64
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 65
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 66
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 67
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 68
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 69
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 70
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 71
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 72
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -15*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -15*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 73
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 74
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 75
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 76
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 77
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 78
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 79
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 80
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 81
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 82
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 83
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 84
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 85
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 86
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 87
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 88
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 89
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 90
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 91
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 92
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 93
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 94
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 95
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 96
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -14*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -14*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 97
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 98
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 99
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 100
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 101
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 102
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 103
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 104
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 105
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 106
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 107
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 108
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 109
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 110
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 111
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 112
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 113
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 114
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 115
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 116
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 117
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 118
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 119
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 120
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -13*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -13*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 121
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 122
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 123
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 124
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 125
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 126
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 127
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 128
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 129
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 130
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 131
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 132
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 133
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 134
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 135
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 136
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 137
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 138
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 139
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 140
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 141
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 142
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 143
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 144
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -12*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -12*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 145
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 146
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 147
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 148
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 149
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 150
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 151
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 152
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 153
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 154
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 155
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 156
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 157
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 158
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 159
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 160
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 161
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 162
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 163
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 164
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 165
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 166
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 167
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 168
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -11*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -11*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 169
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 170
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 171
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 172
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 173
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 174
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 175
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 176
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 177
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 178
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 179
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 180
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 181
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 182
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 183
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 184
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 185
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 186
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 187
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 188
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 189
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 190
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 191
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 192
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -10*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -10*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 193
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 194
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 195
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 196
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 197
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 198
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 199
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 200
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 201
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 202
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 203
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 204
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 205
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 206
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 207
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 208
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 209
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 210
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 211
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 212
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 213
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 214
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 215
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 216
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -9*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -9*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 217
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 218
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 219
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 220
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 221
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 222
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 223
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 224
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 225
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 226
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 227
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 228
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 229
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 230
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 231
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 232
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 233
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 234
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 235
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 236
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 237
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 238
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 239
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 240
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -8*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -8*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 241
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -7*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -7*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 242
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -7*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -7*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 243
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -7*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -7*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 244
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -7*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -7*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 245
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -7*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -7*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 246
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -7*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -7*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 247
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -7*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -7*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 248
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -7*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -7*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 249
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -7*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -7*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 250
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -7*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -7*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 251
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -7*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -7*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 252
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -7*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -7*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 253
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 254
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 255
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 256
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 257
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 258
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 259
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 260
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 261
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 262
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 263
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 264
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 265
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 266
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 267
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 268
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 269
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 270
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 271
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 272
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 273
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 274
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 275
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 276
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -6*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -6*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 277
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 278
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 279
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 280
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 281
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 282
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 283
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 284
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 285
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 286
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 287
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 288
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 289
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 290
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 291
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 292
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 293
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 294
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 295
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 296
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 297
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 298
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 299
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 300
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -5*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -5*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 301
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 302
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 303
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 304
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 305
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 306
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 307
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 308
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 309
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 310
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 311
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 312
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 313
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 314
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 315
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 316
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 317
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 318
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 319
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 320
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 321
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 322
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 323
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 324
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -4*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -4*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 325
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 326
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 327
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 328
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 329
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 330
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 331
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 332
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 333
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 334
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 335
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 336
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 337
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 338
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 339
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 340
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 341
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 342
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 343
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 344
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 345
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 346
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 347
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 348
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -3*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -3*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 349
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 350
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 351
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 352
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 353
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 354
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 355
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 356
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 357
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 358
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 359
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 360
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 361
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 362
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 363
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 364
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 365
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 366
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 367
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 368
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 369
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 370
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 371
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 372
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -2*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -2*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 373
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 374
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 375
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 376
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 377
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 378
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 379
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 380
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 381
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 382
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 383
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 384
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 385
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 386
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 387
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 388
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 389
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 390
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 391
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 392
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 393
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 394
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 395
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 396
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = -1*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = -1*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 397
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 398
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 399
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 400
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 401
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 402
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 403
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 404
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 405
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 406
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 407
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 408
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 409
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 410
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 411
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 412
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 413
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 414
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 415
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 416
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 417
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 418
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 419
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 420
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 0*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 0*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 421
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 422
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 423
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 424
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 425
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 426
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 427
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 428
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 429
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 430
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 431
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 432
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 433
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 434
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 435
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 436
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 437
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 438
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 439
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 440
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 441
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 442
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 443
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 444
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 1*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 1*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 445
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 446
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 447
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 448
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 449
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 450
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 451
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 452
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 453
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 454
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 455
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 456
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 457
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 458
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 459
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 460
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 461
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 462
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 463
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 464
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 465
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 466
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 467
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 468
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 2*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 2*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 469
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 470
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 471
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 472
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 473
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 474
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 475
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 476
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 477
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 478
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 479
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 480
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 481
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 482
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 483
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 484
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 485
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 486
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 487
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 488
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 489
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 490
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 491
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 492
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 3*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 3*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 493
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 494
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 495
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 496
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 497
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 498
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 499
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 500
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 501
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 502
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 503
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 504
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 505
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 506
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 507
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 508
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 509
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 510
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 511
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 512
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 513
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 514
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 515
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 516
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 4*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 4*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 517
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 5*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 5*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 518
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 5*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 5*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 519
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 5*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 5*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 520
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 5*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 5*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 521
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 5*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 5*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 522
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 5*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 5*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 523
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 5*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 5*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 524
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 5*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 5*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 525
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 5*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 5*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 526
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 5*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 5*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 527
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 5*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 5*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 528
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 5*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 5*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 529
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 530
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 531
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 532
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 533
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 534
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 535
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 536
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 537
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 538
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 539
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 540
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 541
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 542
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 543
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 544
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 545
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 546
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 547
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 548
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 549
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 550
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 551
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 552
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 6*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 6*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 553
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 554
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 555
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 556
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 557
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 558
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 559
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 560
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 561
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 562
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 563
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 564
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 565
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 566
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 567
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 568
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 569
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 570
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 571
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 572
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 573
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 574
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 575
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 576
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 7*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 7*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 577
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 578
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 579
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 580
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 581
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 582
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 583
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 584
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 585
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 586
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 587
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 588
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 589
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 590
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 591
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 592
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 593
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 594
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 595
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 596
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 597
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 598
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 599
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 600
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 8*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 8*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 601
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 602
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 603
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 604
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 605
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 606
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 607
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 608
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 609
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 610
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 611
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 612
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 613
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 614
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 615
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 616
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 617
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 618
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 619
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 620
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 621
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 622
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 623
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 624
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 9*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 9*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 625
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 626
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 627
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 628
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 629
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 630
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 631
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 632
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 633
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 634
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 635
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 636
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 637
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 638
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 639
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 640
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 641
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 642
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 643
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 644
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 645
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 646
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 647
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 648
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 10*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 10*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 649
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 650
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 651
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 652
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 653
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 654
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 655
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 656
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 657
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 658
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 659
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 660
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 661
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 662
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 663
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 664
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 665
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 666
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 667
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 668
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 669
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 670
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 671
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 672
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 11*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 11*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 673
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 674
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 675
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 676
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 677
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 678
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 679
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 680
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 681
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 682
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 683
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 684
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 685
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 686
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 687
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 688
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 689
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 690
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 691
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 692
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 693
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 694
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 695
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 696
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 12*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 12*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 697
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 698
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 699
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 700
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 701
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 702
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 703
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 704
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 705
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 706
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 707
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 708
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 709
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 710
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 711
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 712
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 713
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 714
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 715
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 716
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 717
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 718
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 719
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 720
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 13*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 13*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 721
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 722
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 723
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 724
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 725
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 726
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 727
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 728
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 729
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 730
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 731
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 732
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 733
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 734
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 735
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 736
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 737
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 738
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 739
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 740
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 741
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 742
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 743
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 744
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 14*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 14*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 745
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 746
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 747
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 748
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 749
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 750
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 751
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 752
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 753
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 754
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 755
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 756
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 757
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 758
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 759
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 760
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 761
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 762
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 763
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 764
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 765
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 766
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 767
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 768
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 15*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 15*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 769
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 770
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 771
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 772
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 773
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 774
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 775
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 776
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 777
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 778
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 779
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 780
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 781
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 782
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 783
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 784
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 785
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 786
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 787
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 788
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 789
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 790
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 791
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 792
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 16*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 16*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 793
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+-12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+-12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 794
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+-11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+-11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 795
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+-10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+-10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 796
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+-9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+-9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 797
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+-8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+-8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 798
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+-7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+-7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 799
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+-6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+-6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 800
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+-5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+-5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 801
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+-4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+-4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 802
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+-3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+-3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 803
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+-2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+-2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 804
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+-1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+-1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 805
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+1*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+1*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 806
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+2*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+2*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 807
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+3*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+3*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 808
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+4*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+4*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 809
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+5*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+5*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 810
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+6*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+6*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 811
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+7*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+7*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 812
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+8*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+8*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 813
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+9*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+9*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 814
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+10*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+10*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 815
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+11*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+11*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+lens 816
+	rfront = Radius
+	rback = -Radius
+	angle = ShapeAngle
+	begin.x = 17*Ax+12*Cx+OffsetX
+	begin.y = OffsetY
+	begin.z = 17*Az+12*Cz+OffsetZ
+	begin.width = WidthLens
+end lens
+
+time_monitor 817
+	profile_type = PROF_INACTIVE
+	color = 2
+	type = TIMEMON_EXTENDED
+	timeaverage = 2
+	monitoroutputmask = 128
+	frequencyanalysis = TIMEMON_FA_NONE
+	phi = 90
+	fmin = 1/1
+	fmax = 1/2
+	df = 0.002
+	begin.x = Period*16
+	begin.z = 0
+end time_monitor
+
+lens 818
+	rfront = Radius*.8
+	rback = -Radius*.8
+	angle = ShapeAngle
+	begin.x = 0*Ax+-1*Cx+OffsetX+(-Period)
+	begin.y = OffsetY
+	begin.z = 0*Az+-1*Cz+OffsetZ+Period
+	begin.width = WidthLens
+end lens
+
+
+
+
+launch_field 1
+	launch_pathway = 0
+	launch_type = LAUNCH_GAUSSIAN
+	launch_tilt = 1
+	launch_angle = 0
+	launch_width = Period
+	launch_position = -Period*7
+	launch_position_z = -Period*12
+	fdtd_wavelength = 1.55
+end launch_field
+
+launch_field 2
+	launch_pathway = 0
+	launch_type = LAUNCH_GAUSSIAN
+	launch_tilt = 1
+	launch_angle = 180
+	launch_width = Period
+	launch_position = Period*5
+	launch_position_z = Period*12
+	fdtd_wavelength = 1.55
+end launch_field
+

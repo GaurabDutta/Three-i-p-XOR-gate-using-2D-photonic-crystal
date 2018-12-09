@@ -1,0 +1,5 @@
+PbgKPathFormat1 20 
+ScaleFactor 2*pi/Period
+         0          0          0 Gamma
+       0.5          0          0 X
+    
